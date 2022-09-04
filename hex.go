@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// HexString returns hex string of given length.
 func HexString(str_length int) (string, error) {
 	rand.Seed(time.Now().Unix())
 	token := make([]byte, str_length)

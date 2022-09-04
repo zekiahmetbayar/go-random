@@ -8,6 +8,14 @@ import (
 	"github.com/zekiahmetbayar/go-random/internal"
 )
 
+// String returns random string of given length.
+//
+// Parameters:
+//
+//	numbers: Include numbers to random string
+//	letters: Include english letters to random string
+//	specials: Include special characters to random string
+//	length: Random string length
 func String(numbers, letters, specials bool, str_length int) (string, error) {
 	var CHARSET []string
 	var random string
