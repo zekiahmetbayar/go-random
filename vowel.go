@@ -1,7 +1,10 @@
 package gorandom
 
+import "unicode"
+
 // Is letter vowel check
 func IsVowel(char rune) bool {
+	char = unicode.ToLower(char)
 	switch {
 	case
 		char == 'a',
@@ -17,6 +20,7 @@ func IsVowel(char rune) bool {
 
 // Is letter Turkish vowel check
 func IsTurkishVowel(char rune) bool {
+	char = unicode.TurkishCase.ToLower(char)
 	switch {
 	case
 		char == 'a',
