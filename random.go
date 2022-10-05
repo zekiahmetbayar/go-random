@@ -29,7 +29,7 @@ func String(numbers, letters, specials bool, str_length int) (string, error) {
 	}
 
 	CHARSET = internal.GetCharset(numbers, letters, specials) // Get charset
-	rand.Seed(time.Now().Unix())                              // Set start point randomly
+	rand.Seed(time.Now().UnixNano())                          // Set start point randomly
 
 	for i := 0; i < str_length; i += 1 {
 		random += CHARSET[rand.Intn(len(CHARSET))] // Generate random string
